@@ -1,18 +1,18 @@
 services:
 
-  vaccineapp-api:
-    image: vaccineapp-api
-    container_name: vaccineapp-api 
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    ports:
-      - "8980:8080"
-    networks:
-      - vaccineapp-net
-    entrypoint: ["/bin/sh", "-c", "sleep 60 && dotnet MyVaccine.WebApi.dll"]
-    depends_on:
-      - vaccineapp-sqlserver
+  # vaccineapp-api:
+  #   image: vaccineapp-api
+  #   container_name: vaccineapp-api 
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8980:8080"
+  #   networks:
+  #     - vaccineapp-net
+  #   entrypoint: ["/bin/sh", "-c", "sleep 60 && dotnet MyVaccine.WebApi.dll"]
+  #   depends_on:
+  #     - vaccineapp-sqlserver
 
   vaccineapp-sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
