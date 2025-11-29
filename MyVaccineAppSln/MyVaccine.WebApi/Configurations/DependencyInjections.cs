@@ -16,18 +16,13 @@ public static class DependencyInjections
         services.AddScoped<IBaseRepository<Dependent>, BaseRepository<Dependent>> ();
         services.AddScoped<IBaseRepository<Allergy>, BaseRepository<Allergy>> ();
         services.AddScoped<IBaseRepository<FamilyGroup>, BaseRepository<FamilyGroup>> ();
-        services.AddScoped<IBaseRepository<User>, BaseRepository<User>> ();
         services.AddScoped<IBaseRepository<Vaccine>, BaseRepository<Vaccine>> ();
         services.AddScoped<IBaseRepository<VaccineCategory>, BaseRepository<VaccineCategory>> ();
         services.AddScoped<IBaseRepository<VaccineRecord>, BaseRepository<VaccineRecord>> ();
         #endregion
 
         #region Services Injection
-        // Auth service (existing)
-        services.AddScoped<UserService>();
-        
-        // CRUD services
-        services.AddScoped<IUserService, UserCrudService> ();
+        services.AddScoped<IUserService, UserService> ();
         services.AddScoped<IDependentService, DependentService> ();
         services.AddScoped<IAllergyService, AllergyService> ();
         services.AddScoped<IFamilyGroupService, FamilyGroupService> ();

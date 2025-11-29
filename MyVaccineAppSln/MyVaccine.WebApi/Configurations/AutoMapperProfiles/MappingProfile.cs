@@ -3,7 +3,6 @@ using MyVaccine.WebApi.Configurations.Validators;
 using MyVaccine.WebApi.Dtos.Dependent;
 using MyVaccine.WebApi.Dtos.Allergy;
 using MyVaccine.WebApi.Dtos.FamilyGroup;
-using MyVaccine.WebApi.Dtos.User;
 using MyVaccine.WebApi.Dtos.Vaccine;
 using MyVaccine.WebApi.Dtos.VaccineCategory;
 using MyVaccine.WebApi.Dtos.VaccineRecord;
@@ -29,11 +28,6 @@ public class MappingProfile : Profile
         CreateMap<FamilyGroup, FamilyGroupRequestDto>().ReverseMap();
         CreateMap<FamilyGroup, FamilyGroupResponseDto>()
             .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.FamilyGroupId)).ReverseMap();
-        
-        // User mappings
-        CreateMap<User, UserRequestDto>().ReverseMap();
-        CreateMap<User, UserResponseDto>()
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.UserId)).ReverseMap();
         
         // Vaccine mappings
         CreateMap<Vaccine, VaccineRequestDto>().ReverseMap();

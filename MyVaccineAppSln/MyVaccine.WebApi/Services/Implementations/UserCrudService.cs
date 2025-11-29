@@ -7,7 +7,7 @@ using MyVaccine.WebApi.Services.Contracts;
 
 namespace MyVaccine.WebApi.Services.Implementations;
 
-public class UserCrudService : IUserService
+public class UserCrudService : IUserCrudService
 {
     private readonly IBaseRepository<User> _userRepository;
     private readonly IMapper _mapper;

@@ -11,10 +11,10 @@ namespace MyVaccine.WebApi.Controllers;
 [ApiController]
 public class UsersController : ControllerBase
 {
-    private readonly IUserService _userService;
+    private readonly IUserCrudService _userService;
     private readonly IValidator<UserRequestDto> _validator;
 
-    public UsersController(IUserService userService, IValidator<UserRequestDto> validator)
+    public UsersController(IUserCrudService userService, IValidator<UserRequestDto> validator)
     {
         _userService = userService;
         _validator = validator;

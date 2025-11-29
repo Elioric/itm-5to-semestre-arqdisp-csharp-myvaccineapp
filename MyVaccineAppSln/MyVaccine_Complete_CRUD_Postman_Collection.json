@@ -1,0 +1,1007 @@
+{
+	"info": {
+		"_postman_id": "12345678-1234-1234-1234-123456789012",
+		"name": "MyVaccine API - Complete CRUD Collection",
+		"description": "Colección completa de Postman para todos los CRUD de MyVaccine API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"your-username\",\n  \"password\": \"your-password\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dependents",
+			"item": [
+				{
+					"name": "Get All Dependents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Dependents",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Dependents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dependent by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Dependents/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Dependents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dependents by User ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Dependents/get-dependents-by-userid/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Dependents",
+								"get-dependents-by-userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dependent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Juan Pérez Jr.\",\n  \"dateOfBirth\": \"2024-01-15T00:00:00.000Z\",\n  \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Dependents",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Dependents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dependent",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Juan Pérez Jr. Updated\",\n  \"dateOfBirth\": \"2024-01-15T00:00:00.000Z\",\n  \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Dependents/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Dependents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Dependent",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Dependents/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Dependents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Allergies",
+			"item": [
+				{
+					"name": "Get All Allergies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Allergies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Allergies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Allergy by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Allergies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Allergies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Allergies by User ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Allergies/get-allergies-by-userid/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Allergies",
+								"get-allergies-by-userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Allergy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Penicilina\",\n  \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Allergies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Allergies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Allergy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Penicilina - Actualizada\",\n  \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Allergies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Allergies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Allergy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Allergies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Allergies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Family Groups",
+			"item": [
+				{
+					"name": "Get All Family Groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/FamilyGroups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FamilyGroups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Family Group by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/FamilyGroups/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FamilyGroups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Family Group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Familia Pérez\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/FamilyGroups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FamilyGroups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Family Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Familia Pérez - Actualizada\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/FamilyGroups/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FamilyGroups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Family Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/FamilyGroups/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FamilyGroups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaccines",
+			"item": [
+				{
+					"name": "Get All Vaccines",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Vaccines",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Vaccines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vaccine by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/Vaccines/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Vaccines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vaccine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"COVID-19 Pfizer\",\n  \"requiresBooster\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Vaccines",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Vaccines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vaccine",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"COVID-19 Pfizer-BioNTech\",\n  \"requiresBooster\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Vaccines/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Vaccines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vaccine",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Vaccines/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Vaccines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaccine Categories",
+			"item": [
+				{
+					"name": "Get All Vaccine Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineCategories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vaccine Category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineCategories/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineCategories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vaccine Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Vacunas Obligatorias\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineCategories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vaccine Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Vacunas Obligatorias - Actualizada\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineCategories/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineCategories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vaccine Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineCategories/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineCategories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vaccine Records",
+			"item": [
+				{
+					"name": "Get All Vaccine Records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vaccine Record by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Records by User ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords/get-records-by-userid/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords",
+								"get-records-by-userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Records by Dependent ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords/get-records-by-dependentid/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords",
+								"get-records-by-dependentid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vaccine Record",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 1,\n  \"dependentId\": 1,\n  \"vaccineId\": 1,\n  \"dateAdministered\": \"2023-12-01T10:30:00.000Z\",\n  \"administeredLocation\": \"Centro de Salud Municipal\",\n  \"administeredBy\": \"Dr. María González\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vaccine Record",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 1,\n  \"dependentId\": 1,\n  \"vaccineId\": 1,\n  \"dateAdministered\": \"2023-12-01T10:30:00.000Z\",\n  \"administeredLocation\": \"Hospital Central\",\n  \"administeredBy\": \"Dr. María González Actualizada\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vaccine Record",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/VaccineRecords/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"VaccineRecords",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7001",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
