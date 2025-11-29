@@ -59,7 +59,7 @@ public class UserService : IUserService
                     new Claim(ClaimTypes.Name, user.UserName)
                 };
 
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable(MyVaccineLiterals.JWT_KEY)));
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A2*7gF9@D#1hJ$5mNpRtVwYzZ&k8zbx"));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var token = new JwtSecurityToken(
@@ -103,7 +103,7 @@ public class UserService : IUserService
                     new Claim(ClaimTypes.Name, user.UserName)
                 };
 
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable(MyVaccineLiterals.JWT_KEY)));
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A2*7gF9@D#1hJ$5mNpRtVwYzZ&k8zbx"));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var token = new JwtSecurityToken(

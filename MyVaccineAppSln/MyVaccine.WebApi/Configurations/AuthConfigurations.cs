@@ -40,7 +40,7 @@ public static class AuthConfigurations
                 ValidateIssuerSigningKey = true,
                 //ValidIssuer = "tu_issuer",
                 //ValidAudience = "tu_audience",
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable(MyVaccineLiterals.JWT_KEY))),
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A2*7gF9@D#1hJ$5mNpRtVwYzZ&k8zbx")),
                 //ClockSkew = TimeSpan.Zero // Evita un desfase de tiempo (opcional)
             };
         });
